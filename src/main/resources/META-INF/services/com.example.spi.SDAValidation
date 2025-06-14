@@ -1,0 +1,3 @@
+com.example.spi.PDFValidation
+com.example.spi.GermanIbanValidation
+com.example.spi.BlacklistIbanValidation
