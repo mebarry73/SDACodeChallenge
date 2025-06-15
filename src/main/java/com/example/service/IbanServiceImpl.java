@@ -5,8 +5,9 @@ import java.util.UUID;
 import java.util.stream.Collectors;
 import java.util.stream.StreamSupport;
 
-import org.springframework.data.rest.webmvc.ResourceNotFoundException;
+import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Service;
+import org.springframework.web.server.ResponseStatusException;
 
 import com.example.model.IbanEntity;
 import com.example.repository.IbanRepository;
@@ -34,7 +35,7 @@ public class IbanServiceImpl {
 	}
 	
 	public IbanEntity findById(UUID id) {
-		return repository.findById(id).orElseThrow(() -> new ResourceNotFoundException("IBAN not found!"));
+		return repository.findById(id).orElseThrow(() -> new ResponseStatusException(HttpStatus.BAD_REQUEST, "UUID not found!"));
 	}
 
 	/**

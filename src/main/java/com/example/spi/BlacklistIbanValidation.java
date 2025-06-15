@@ -13,9 +13,10 @@ import com.example.utils.PDFUtils;
 import lombok.extern.java.Log;
 
 /**
- * Validation implementation that checks if any IBANs in given PDF file is blacklisted. 
+ * Validation implementation that checks if any IBAN in given PDF file is blacklisted. 
  * We use the IBAN service / repository for checking this.
  * But there are 3rd party libraries and 3rd party services we could use instead.
+ * This is only one of many possible solutions.
  * 
  * @author barry.grotjahn
  */

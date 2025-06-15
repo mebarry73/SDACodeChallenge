@@ -49,8 +49,7 @@ public class PDFUtils {
 				Pattern p = Pattern.compile(Pattern.quote("IBAN:") + "(.*?)" + Pattern.quote("SWIFT/BIC"));
 				Matcher m = p.matcher(parsedText);
 				while (m.find()) {
-					System.err.println(m.group(1).replaceAll("\\s", ""));
-					
+					log.info(m.group(1).replaceAll("\\s", ""));
 					ibanSet.add(m.group(1).replaceAll("\\s", ""));
 				}
 			}
@@ -89,6 +88,7 @@ public class PDFUtils {
 		Pattern p = Pattern.compile("\\d{2}-\\d{4}-\\d{6}-\\d{4}");
 		Matcher m = p.matcher(textForRegion);
 		while (m.find()) {
+			// do be finished
 		}
 		
 		return null;

@@ -12,7 +12,7 @@
 	<artifactId>SDACodeChallenge</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>SDACodeChallenge</name>
-	<description>Demo project for Spring Boot</description>
+	<description>Demo project SDA Challenge</description>
 	<url/>
 	<licenses>
 		<license/>
@@ -34,7 +34,6 @@
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-data-jpa</artifactId>
 		</dependency>
-
 		<dependency>
 			<groupId>com.h2database</groupId>
 			<artifactId>h2</artifactId>
@@ -58,8 +57,7 @@
 			<groupId>org.apache.pdfbox</groupId>
 			<artifactId>pdfbox</artifactId>
 			<version>3.0.5</version>
-		</dependency>
-		
+		</dependency>		
 	</dependencies>
 
 	<build>
@@ -68,7 +66,19 @@
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
 			</plugin>
+            <plugin>
+	            <groupId>org.apache.maven.plugins</groupId>
+	            <artifactId>maven-compiler-plugin</artifactId>
+	            <configuration>
+	                <forceJavacCompilerUse>true</forceJavacCompilerUse>
+	                <annotationProcessorPaths>
+	                    <path>
+	                        <groupId>org.projectlombok</groupId>
+	                        <artifactId>lombok</artifactId>
+	                    </path>
+	                </annotationProcessorPaths>
+	            </configuration>
+	        </plugin>						
 		</plugins>
 	</build>
-
 </project>

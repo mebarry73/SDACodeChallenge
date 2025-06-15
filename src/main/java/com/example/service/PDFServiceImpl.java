@@ -18,8 +18,12 @@ import lombok.RequiredArgsConstructor;
 import lombok.extern.java.Log;
 
 /**
- * The PDFServiceImpl service, that is doing all validations (using SPI, defined under META-INF/services/com.example.spi.SDAValidation).
+ * The PDFServiceImpl service, that is doing all validations 
+ * (using SPI, defined under META-INF/services/com.example.spi.SDAValidation).
  * This is an example of how to extend as mentioned in the task.
+ * 
+ * What should be optimized is to introduce some kind of caching, so we not read the PDF again and again, 
+ * as this is an performance issue.
  * 
  * @author barry.grotjahn
  */
